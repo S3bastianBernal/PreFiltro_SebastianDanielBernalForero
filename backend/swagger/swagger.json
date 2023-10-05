@@ -1,0 +1,1273 @@
+  {
+      "openapi": "3.0.0",
+        "info": {
+          "title": "Basic GameBuster API",
+          "version": "1.0.0",
+          "description": "A basic API"
+        },
+      "servers": [
+        {
+          "url": "http://localhost:4000/api",
+          "description": "Localhost Server for testing the GameBuster API"
+        }
+      ],
+      "paths": {
+        "/consolas":{
+          "get": {
+            "tags": [
+              "consolas"
+            ],
+            "summary": "Get all Consoles",
+            "description": "Obtiene una lista con todos las consolas existentes",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "consolas": {
+                          "nombre": "PlayStation 5",
+                          "modelo": "Standard",
+                          "almacenamiento": "825 GB SSD",
+                          "precio": 499.99,
+                          "año_fabricacion": 2020
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "NOT OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "error": "Bad Request (could change)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/clientes":{
+          "get": {
+            "tags": [
+              "clientes"
+            ],
+            "summary": "Get all Clients",
+            "description": "Obtiene una lista con todos los clientes existentes",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "clientes": {
+                            "nombre": "Ricardo",
+                            "apellido": "Lara",
+                            "nit": "1234567890",
+                            "direccion": "Calle 123, Ciudad",
+                            "telefono": "+1234567890"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "NOT OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "error": "Bad Request (could change)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/videojuegos":{
+          "get": {
+            "tags": [
+              "videojuegos"
+            ],
+            "summary": "Get all Games",
+            "description": "Obtiene una lista con todos los videojuegos existentes",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "videojuegos": {
+                          "nombre": "The Legend of Zelda: Breath of the Wild",
+                          "precio": 59.99,
+                          "plataforma": "Nintendo Switch",
+                          "genero": "Aventura",
+                          "clasificacion": "E10+"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "NOT OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "error": "Bad Request (could change)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/pedidos":{
+          "get": {
+            "tags": [
+              "pedidos"
+            ],
+            "summary": "Get all ordes",
+            "description": "Obtiene una lista con todos los pedidos existentes",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "pedidos": {
+                          "producto": "The Legend of Zelda: Breath of the Wild",
+                          "cliente": "1234567890",
+                          "total": 59.99,
+                          "fecha": "2023-10-03",
+                          "estado": "Pendiente"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "NOT OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "error": "Bad Request (could change)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/peliculas": {
+          "get": {
+            "tags": [
+              "peliculas"
+            ],
+            "summary": "Get all Movies",
+            "description": "Obtiene una lista con todos las peliculas existentes",
+            "parameters": [],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "peliculas": {
+                          "pelicula": "FNAF",
+                          "stock": 30,
+                          "precio": 7.99,
+                          "categoria": "Fantasía/Aventura"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "NOT OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "no schema defined"
+                      },
+                      "example": {
+                        "error": "Bad Request (could change)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+      "/post/peliculas": {
+        "post": {
+          "tags": [
+            "peliculas"
+          ],
+          "summary": "Creates a movie",
+          "description": "Crea una pelicula en la base de datos",
+          "requestBody": { 
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/peliculas"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "peliculas": {
+                        "pelicula": "FNAF",
+                        "stock": 30,
+                        "precio": 7.99,
+                        "categoria": "Fantasía/Aventura"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/post/clientes": {
+        "post": {
+          "tags": [
+            "clientes"
+          ],
+          "summary": "Creates a Client",
+          "description": "Crea un Cliente en la base de datos",
+          "requestBody": { 
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/clientes"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "clientes": {
+                        "nombre": "Ricardo",
+                        "apellido": "Lara",
+                        "nit": "1234567890",
+                        "direccion": "Calle 123, Ciudad",
+                        "telefono": "+1234567890"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/post/consolas": {
+        "post": {
+          "tags": [
+            "consolas"
+          ],
+          "summary": "Creates a Console",
+          "description": "Crea una Consola en la base de datos",
+          "requestBody": { 
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/consolas"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "consolas": {
+                        "nombre": "PlayStation 5",
+                        "modelo": "Standard",
+                        "almacenamiento": "825 GB SSD",
+                        "precio": 499.99,
+                        "año_fabricacion": 2020
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/post/videojuegos": {
+        "post": {
+          "tags": [
+            "videojuegos"
+          ],
+          "summary": "Creates a videogame",
+          "description": "Crea un Videojuego en la base de datos",
+          "requestBody": { 
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/videojuegos"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "videojuegos": {
+                        "nombre": "The Legend of Zelda: Breath of the Wild",
+                        "precio": 59.99,
+                        "plataforma": "Nintendo Switch",
+                        "genero": "Aventura",
+                        "clasificacion": "E10+"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/post/pedidos": {
+        "post": {
+          "tags": [
+            "pedidos"
+          ],
+          "summary": "Creates a order",
+          "description": "Crea un Pedido en la base de datos",
+          "requestBody": { 
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/pedidos"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "videojuegos": {
+                        "nombre": "The Legend of Zelda: Breath of the Wild",
+                        "precio": 59.99,
+                        "plataforma": "Nintendo Switch",
+                        "genero": "Aventura",
+                        "clasificacion": "E10+"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/delete/peliculas/{_id}": {
+        "delete": {
+          "tags": [
+            "peliculas"
+          ],
+          "summary": "Deletes a Movie",
+          "description": "Elimina una Pelicula de la base de datos",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id de la pelicula a eliminar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                        "msg": "deleted"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/delete/pedidos/{_id}": {
+        "delete": {
+          "tags": [
+            "pedidos"
+          ],
+          "summary": "Deletes a ordr",
+          "description": "Elimina un Pedido de la base de datos",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id del pedido a eliminar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                        "msg": "deleted"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/delete/consolas/{_id}": {
+        "delete": {
+          "tags": [
+            "consolas"
+          ],
+          "summary": "Deletes a Console",
+          "description": "Elimina una Consola de la base de datos",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id de la consola a eliminar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                        "msg": "deleted"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/delete/clientes/{_id}": {
+        "delete": {
+          "tags": [
+            "clientes"
+          ],
+          "summary": "Deletes a Client",
+          "description": "Elimina un cliente de la base de datos",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id del Cliente a eliminar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                        "msg": "deleted"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/delete/videojuegos/{_id}": {
+        "delete": {
+          "tags": [
+            "videojuegos"
+          ],
+          "summary": "Deletes a Game",
+          "description": "Elimina un Videojuego de la base de datos",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id del videojuego a eliminar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                        "msg": "deleted"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/update/peliculas/{_id}": {
+        "put": {
+          "tags": [
+            "peliculas"
+          ],
+          "summary": "Updates a Movie",
+          "description": "Actualiza una Pelicula de la base de datos",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/Test"
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "_id",
+              "in": "path",
+              "required": true,
+              "description": "Id de la pelicula a actualizar",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "msg": "updated"
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "NOT FOUND",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Id Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/update/consolas/{_id}": {
+        "put": {
+          "tags": [
+            "consolas"
+          ],
+          "summary": "Updates a console",
+          "description": "Actualiza una Consola de la base de datos",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/consolas"
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "_id",
+              "in": "path",
+              "required": true,
+              "description": "Id de la consola a actualizar",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "msg": "updated"
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "NOT FOUND",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Id Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/update/pedidos/{_id}": {
+        "put": {
+          "tags": [
+            "pedidos"
+          ],
+          "summary": "Updates a order",
+          "description": "Actualiza un Pedido de la base de datos",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/consolas"
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "_id",
+              "in": "path",
+              "required": true,
+              "description": "Id del Pedido a actualizar",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "msg": "updated"
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "NOT FOUND",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Id Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/update/videojuegos/{_id}": {
+        "put": {
+          "tags": [
+            "videojuegos"
+          ],
+          "summary": "Updates a Videogame",
+          "description": "Actualiza un videojuegos de la base de datos",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/consolas"
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "_id",
+              "in": "path",
+              "required": true,
+              "description": "Id del Videojuego a actualizar",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "msg": "updated"
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "NOT FOUND",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Id Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/update/clientes/{_id}": {
+        "put": {
+          "tags": [
+            "clientes"
+          ],
+          "summary": "Updates a Client",
+          "description": "Actualiza un Cliente de la base de datos",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/clientes"
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "_id",
+              "in": "path",
+              "required": true,
+              "description": "Id del Cliente a actualizar",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "msg": "updated"
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "NOT FOUND",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "example": {
+                      "error": "Id Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/one/{_id}": {
+        "get":{
+          "tags":[
+            "peliculas"
+          ],
+          "summary": "Get a specify Movie",
+          "description": "Busca una pelicula en especifico",
+          "parameters":[
+            {
+              "in": "path",
+              "name": "_id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Id de la pelicua a buscar"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "items": {
+                      "$ref": "no schema defined"
+                    },
+                    "example": {
+                      "peliculas": {
+                        "pelicula": "FNAF",
+                        "stock": 30,
+                        "precio": 7.99,
+                        "categoria": "Fantasía/Aventura"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "NOT OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "no schema defined"
+                    },
+                    "example": {
+                      "error": "Bad Request (could change)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+      "definitions": {
+        "peliculas": {
+          "type": "object",
+          "properties": {
+            "pelicula":{
+              "type": "string",
+              "example": "FNAF"
+            },
+            "stock":{
+              "type": "integer",
+              "example": 30
+            },
+            "precio":{
+              "type": "number",
+              "example": 7.99
+            },
+            "categoria":{
+              "type": "string",
+              "example": "Fantasía/Aventura"
+            }
+          }
+        },
+        "clientes": {
+          "type": "object",
+          "properties": {
+            "nombre":{
+              "type": "string",
+              "example": "Dani"
+            },
+            "apellido":{
+              "type": "string",
+              "example": "forero"
+            },
+            "nit":{
+              "type": "string",
+              "example": "1005336250"
+            },
+            "direccion":{
+              "type": "string",
+              "example": "calle 108 #45-26"
+            },
+            "telefono":{
+              "type": "string",
+              "example": "3025784694"
+            }
+          }
+        },
+        "consolas": {
+          "type": "object",
+          "properties": {
+            "nombre":{
+              "type": "string",
+              "example": "Play 1"
+            },
+            "modelo":{
+              "type": "string",
+              "example": "Clasic"
+            },
+            "almacenamiento":{
+              "type": "string",
+              "example": "N/A"
+            },
+            "precio":{
+              "type": "number",
+              "example": 25.89
+            },
+            "año_fabricacion":{
+              "type": "integer",
+              "example": 1998
+            }
+          }
+        },
+        "videojuegos": {
+          "type": "object",
+          "properties": {
+            "nombre":{
+              "type": "string",
+              "example": "Mario 64"
+            },
+            "precio":{
+              "type": "number",
+              "example": 25.89
+            },
+            "Plataforma":{
+              "type": "string",
+              "example": "Nintendo 64"
+            },
+            "genero":{
+              "type": "string",
+              "example": "Aventura"
+            },
+            
+            "clasificacion":{
+              "type": "string",
+              "example": "E10+"
+            }
+          }
+        },
+        "pedidos": {
+          "type": "object",
+          "properties": {
+            "producto":{
+              "type": "string",
+              "example": "Mario 64"
+            },
+            "cliente":{
+              "type": "string",
+              "example": "1005336250"
+            },
+            "total":{
+              "type": "number",
+              "example": 5.99
+            },
+            "fecha":{
+              "type": "string",
+              "example": "2023-10-03"
+            },
+            
+            "estado":{
+              "type": "string",
+              "example": "Pendiente"
+            }
+          }
+        },
+
+        "Test": {
+          "type": "object",
+          "properties": {
+            "pelicula": {
+              "type": "string",
+              "example": "Test Movie"
+            },
+            "stock": {
+              "type": "integer",
+              "example": 25
+            },
+            "precio": {
+              "type": "number",
+              "example": 3.99
+            },
+            "categoria": {
+              "type": "string",
+              "example": "Accion/Fanatsia"
+            }
+          }
+        }
+      }
+      
+    }
+

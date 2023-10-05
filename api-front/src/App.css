@@ -1,0 +1,12 @@
+body{
+    background-image: url(https://c.wallhere.com/photos/06/c6/2560x1600_px_pattern_wood-571107.jpg!d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.main{
+    margin-left: 5rem;
+}
