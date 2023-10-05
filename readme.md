@@ -30,6 +30,8 @@ Eso es lo que va a mostrar 👇👇
 
 ```bash
 cd backend
+```
+```bash
 npm i
 ```
 
