@@ -171,3 +171,19 @@
     margin-left: 1.5rem;
     margin-top: 0.3rem;
   }
+
+  @media (max-width:390px){
+    .boton {
+      position: relative;
+      width: 10em;
+      height: 3.5em;
+      outline: none;
+      transition: 0.1s;
+      background-color: transparent;
+      border: none;
+      font-size: 13px;
+      margin-left: 6rem;
+      font-weight: bold;
+      color: #ddebf0;
+    }
+  }

@@ -23,7 +23,7 @@ export function UpdatePelis(){
 
     const updateApiData = () =>{
         axios.put(`http://localhost:4000/api/update/peliculas/${_id}`,{
-            pelicula,stock,precio,categoria
+            pelicula,stock:parseInt(precio),precio:parseFloat(precio),categoria
         }).then(() =>{
             history.push('/peliculas')
         })
@@ -78,7 +78,7 @@ export function UpdateGames(){
 
 const updateApiData = () =>{
     axios.put(`http://localhost:4000/api/update/videojuegos/${_id}`,{
-        nombre,precio,plataforma,genero,clasificacion
+        nombre,precio:parseFloat(precio),plataforma,genero,clasificacion
     }).then(() =>{
         history.push('/videojuegos')
     })
@@ -136,7 +136,7 @@ export function UpdateConsolas(){
   
   const updateApiData = () =>{
       axios.put(`http://localhost:4000/api/update/consolas/${_id}`,{
-        nombre,precio,modelo,almacenamiento,año_fabricacion
+        nombre,precio:parseFloat(precio),modelo,almacenamiento,año_fabricacion
       }).then(() =>{
           history.push('/consolas')
       })
@@ -264,7 +264,7 @@ export function UpdatePedidos(){
 const updateApiData = () => {
 
   axios.put(`http://localhost:4000/api/post/pedidos`,{
-        producto,cliente,total,fecha,estado
+        producto,cliente,total:parseFloat(total),fecha,estado
     }).then(()=>{
         history.push("/pedidos")
     })

@@ -24,7 +24,7 @@ export function CreatePeli(){
         }
 
         axios.post(`http://localhost:4000/api/post/peliculas`,{
-            pelicula,stock,precio,categoria
+            pelicula,stock:parseInt(stock),precio:parseFloat(precio),categoria
         }).then(()=>{
             history.push("/peliculas")
         })
@@ -78,7 +78,7 @@ export function CreateGame(){
       }
 
       axios.post(`http://localhost:4000/api/post/videojuegos`,{
-          nombre,precio,plataforma,genero,clasificacion
+          nombre,precio:parseFloat(precio),plataforma,genero,clasificacion
       }).then(()=>{
           history.push("/videojuegos")
       })
@@ -135,7 +135,7 @@ export function CreateConsola(){
     }
 
     axios.post(`http://localhost:4000/api/post/consolas`,{
-        nombre,precio,modelo,almacenamiento,año_fabricacion
+        nombre,precio:parseFloat(precio),modelo,almacenamiento,año_fabricacion
     }).then(()=>{
         history.push("/consolas")
     })
@@ -260,7 +260,11 @@ export function CreatePedido(){
     }
 
     axios.post(`http://localhost:4000/api/post/pedidos`,{
-        producto,cliente,total,fecha,estado
+        producto,
+        cliente,
+        total:parseFloat(total),
+        fecha,
+        estado
     }).then(()=>{
         history.push("/pedidos")
     })
